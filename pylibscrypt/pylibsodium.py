@@ -25,13 +25,9 @@ import numbers
 import platform
 import struct
 
-from . import mcf as mcf_mod
 from .common import *
-
-if platform.python_implementation() == 'PyPy':
-    from . import pypyscrypt_inline as scr_mod
-else:
-    from . import pylibsodium_salsa as scr_mod
+from . import mcf as mcf_mod
+from . import pypyscrypt_inline as scr_mod
 
 
 _lib_soname = ctypes.util.find_library('sodium')

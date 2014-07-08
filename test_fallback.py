@@ -39,7 +39,3 @@ unimport()
 platform.python_implementation = lambda:'CPython'
 import pylibscrypt
 
-unimport()
-sys.modules['pylibscrypt.pylibsodium_salsa'] = None
-import pylibscrypt
-
