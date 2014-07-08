@@ -14,10 +14,7 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-import platform
 import sys
-
-platform.python_implementation = lambda:'PyPy'
 
 def unimport():
     del sys.modules['pylibscrypt']
@@ -36,6 +33,5 @@ sys.modules['pylibscrypt.pylibsodium'] = None
 import pylibscrypt
 
 unimport()
-platform.python_implementation = lambda:'CPython'
 import pylibscrypt
 
